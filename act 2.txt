@@ -1,0 +1,16 @@
+Inicio
+
+    Mostrar "Ingrese su nombre:"
+    Leer nombre
+
+    Mostrar "Ingrese su año de nacimiento:"
+    Leer añoNacimiento
+
+    Calcular edadEnAnios = añoActual - añoNacimiento
+    Calcular edadEnMeses = edadEnAnios * 12
+
+    Mostrar "Nombre: " + nombre
+    Mostrar "Año de nacimiento: " + añoNacimiento
+    Mostrar "Edad en meses: " + edadEnMeses
+
+Fin

@@ -1,0 +1,11 @@
+Inicio
+
+    Mostrar "Ingrese su año de nacimiento:"
+    Leer añoNacimiento
+
+    SI añoNacimiento < 2000 ENTONCES
+        Escribir "Naciste antes del segundo milenio."
+    SINO SI añoNacimiento < 2018 ENTONCES
+        Escribir "Naciste antes de la pandemia."
+    SINO
+        Escribir "Naciste después de

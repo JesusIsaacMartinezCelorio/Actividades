@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Pedir el año de nacimiento al usuario
+        Console.Write("Ingresa tu año de nacimiento: ");
+        int anioNacimiento = int.Parse(Console.ReadLine());
+
+        int anioActual = 2025;
+        int edad = anioActual - anioNacimiento;
+
+        Console.WriteLine($"\nTienes {edad} años.");
+        Console.WriteLine("Has vivido los siguientes lustros:");
+
+        int numeroDeLustro = 0;
+
+        // Recorrer desde 0 hasta la edad, en pasos d

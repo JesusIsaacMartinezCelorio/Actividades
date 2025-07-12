@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Declaración de variables
+        string nombre = "Carlos";
+        int anioNacimiento = 2000;
+        int edadEnMeses = (2025 - anioNacimiento) * 12;
+
+        // Mostrar los valores
+        Console.WriteLine($"Nombre: {nombre}");
+        Console.WriteLine($"Año de nacimiento: {anioNacimiento}");
+        Console.WriteLine($"Edad en meses: {edadEnMeses}");
+    }
+}

@@ -1,0 +1,26 @@
+Inicio
+
+    Definir string contraseñaSecreta = "1234"
+    Definir string intento
+    Definir int intentosRealizados = 0
+
+    // Repetir al menos una vez
+    HACER
+        Mostrar "Ingresa la contraseña:"
+        Leer intento
+
+        intentosRealizados = intentosRealizados + 1
+
+        SI intento == contraseñaSecreta ENTONCES
+            Mostrar "¡Contraseña correcta!"
+        SINO SI intentosRealizados < 3 ENTONCES
+            Mostrar "Contraseña incorrecta. Intenta de nuevo."
+        FIN SI
+
+    MIENTRAS intento != contraseñaSecreta Y intentosRealizados < 3
+
+    SI intento != contraseñaSecreta ENTONCES
+        Mostrar "Has agotado los intentos. Acceso denegado."
+    FIN SI
+
+Fin
