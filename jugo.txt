@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    // Método que recibe un string y muestra un mensaje
+    static void HacerJugo(string fruta)
+    {
+        Console.WriteLine("Estoy haciendo jugo de " + fruta);
+    }
+
+    // Método que recibe dos enteros y muestra su suma
+    static void MostrarSuma(int a, int b)
+    {
+        Console.WriteLine("La suma de " + a + " y " + b + " es: " + (a + b));
+    }
+
+    // Método que recibe un booleano y muestra si es verdadero o falso
+    static void MostrarEstado(bool estado)
+    {
+        if (estado)
+            Console.WriteLine("El estado es verdadero.");
+        else
+            Console.WriteLine("El estado es falso.");
+    }
+
+    static void Main()
+    {
+        // Llamadas a los métodos con diferentes tipos de parámetros
+        HacerJugo("naranja");
+        MostrarSuma(5, 3);
+        MostrarEstado(true);
+    }
+}
