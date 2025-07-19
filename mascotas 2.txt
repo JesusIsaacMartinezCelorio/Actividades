@@ -1,0 +1,87 @@
+using System;
+
+class Mascota
+{
+    // Atributos privados
+    private string nombre;
+    private int diasDeVida;
+    private string tipo;
+
+    // Constructor
+    public Mascota(string nom, int dias, string tipoMascota)
+    {
+        nombre = nom;
+        diasDeVida = dias;
+        tipo = tipoMascota;
+    }
+
+    // Método para mostrar información
+    public void MostrarInfo()
+    {
+        Console.WriteLine($"Nombre: {nombre}");
+        Console.WriteLine($"Días de vida: {diasDeVida}");
+        Console.WriteLine($"Tipo: {tipo}");
+    }
+
+    // Getter de edad
+    public int GetEdad()
+    {
+        return diasDeVida;
+    }
+
+    // Setter de edad
+    public void SetEdad(int nuevaEdad)
+    {
+        diasDeVida = nuevaEdad;
+    }
+
+    // Calcular edad humana (suponiendo: 1 año animal = 7 años humanos)
+    public int CalcularEdadHumana()
+    {
+        return diasDeVida * 7;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Crear dos mascotas con diferentes edades y tipos
+        Mascota m1 = new Mascota("Firulais", 3, "perro");
+        Mascota m2 = new Mascota("Misu", 2, "gato");
+
+        // Llamar a todos los métodos en m1
+        Console.WriteLine("=== Mascota 1 ===");
+        m1.MostrarInfo();
+        Console.WriteLine($"Edad humana: {m1.CalcularEdadHumana()}");
+
+        Console.WriteLine("Cambiando edad...");
+        m1.SetEdad(5);
+        Console.WriteLine($"Nueva edad: {m1.GetEdad()}");
+        Console.WriteLine($"Nueva edad humana: {m1.CalcularEdadHumana()}");
+        Console.WriteLine();
+
+        // Llamar a todos los métodos en m2
+        Console.WriteLine("=== Mascota 2 ===");
+        m2.MostrarInfo();
+        Console.WriteLine($"Edad humana: {m2.CalcularEdadHumana()}");
+
+        Console.WriteLine("Cambiando edad...");
+        m2.SetEdad(4);
+        Console.WriteLine($"Nueva edad: {m2.GetEdad()}");
+        Console.WriteLine($"Nueva edad humana: {m2.CalcularEdadHumana()}");
+        Console.WriteLine();
+
+        // Ejemplo adicional: Hacer jugo (sin relación con la clase Mascota)
+        HacerJugo("naranja");
+
+        Console.WriteLine("Presiona una tecla para salir...");
+        Console.ReadKey();
+    }
+
+    // Método adicional fuera de la clase Mascota
+    static void HacerJugo(string fruta)
+    {
+        Console.WriteLine($"Haciendo jugo de {fruta}... ¡Listo!");
+    }
+}

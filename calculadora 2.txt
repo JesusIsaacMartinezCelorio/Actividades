@@ -1,0 +1,82 @@
+Inicio ProgramaCalculadoraConEdad
+    // Variables existentes para la calculadora
+    Declarar num1, num2, resultado Como Real
+    Declarar opcion Como Entero
+
+    // Nueva variable para edad
+    Declarar edadAnimal Como Entero
+
+    // Métodos relacionados a edad
+    Definir Función getEdad(edad: Entero) → Entero
+        Retornar edad
+    FinFunción
+
+    Definir Procedimiento setEdad(edadRef: Referencia a Entero, nuevaEdad: Entero)
+        edadRef ← nuevaEdad
+    FinProcedimiento
+
+    Definir Función calcularEdadHumana(edadAnimal: Entero) → Entero
+        // Supuesto: 1 año animal equivale a 7 años humanos
+        Retornar edadAnimal * 7
+    FinFunción
+
+    Repetir Para Siempre
+        Escribir "Ingrese el primer número:"
+        Leer num1
+
+        Escribir "Ingrese el segundo número:"
+        Leer num2
+
+        Escribir ""
+        Escribir "Operaciones:"
+        Escribir "1 = Sumar"
+        Escribir "2 = Restar"
+        Escribir "3 = Multiplicar"
+        Escribir "4 = Dividir"
+        Escribir "5 = Salir"
+        Escribir "6 = Ingresar edad del animal"
+        Escribir "7 = Mostrar edad del animal en años humanos"
+        Escribir ""
+        Escribir "Elija una opción:"
+        Leer opcion
+
+        Si opcion = 5 Entonces
+            Salir Repetir  // terminar programa
+
+        Sino Si opcion = 1 Entonces
+            resultado ← num1 + num2
+            Escribir "Resultado: ", resultado
+
+        Sino Si opcion = 2 Entonces
+            resultado ← num1 - num2
+            Escribir "Resultado: ", resultado
+
+        Sino Si opcion = 3 Entonces
+            resultado ← num1 * num2
+            Escribir "Resultado: ", resultado
+
+        Sino Si opcion = 4 Entonces
+            Si num2 = 0 Entonces
+                Escribir "Error: división por cero."
+            Sino
+                resultado ← num1 / num2
+                Escribir "Resultado: ", resultado
+            FinSi
+
+        Sino Si opcion = 6 Entonces
+            Escribir "Ingrese la edad del animal:"
+            Leer nuevaEdadAnimal
+            Llamar setEdad(edadAnimal, nuevaEdadAnimal)
+            Escribir "Edad guardada."
+
+        Sino Si opcion = 7 Entonces
+            edad ← Llamar getEdad(edadAnimal)
+            edadHumana ← Llamar calcularEdadHumana(edad)
+            Escribir "El animal tiene ", edad, " años (equivale a ", edadHumana, " años humanos)."
+
+        Sino
+            Escribir "Opción inválida."
+        FinSi
+
+    FinRepetir
+Fin
