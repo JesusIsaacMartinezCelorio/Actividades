@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    double num1, num2, resultado;
+    int opcion;
+    while (1) {
+        printf("Ingrese el primer número: ");
+        scanf("%lf", &num1);
+        printf("Ingrese el segundo número: ");
+        scanf("%lf", &num2);
+        printf("Operaciones:\n1=Sumar 2=Restar 3=Multiplicar 4=Dividir 5=Salir\nElija una opción: ");
+        scanf("%d", &opcion);
+        if (opcion == 5) break;
+        if (opcion == 1) resultado = num1 + num2;
+        else if (opcion == 2) resultado = num1 - num2;
+        else if (opcion == 3) resultado = num1 * num2;
+        else if (opcion == 4) {
+            if (num2 == 0) { printf("Error: división por cero.\n"); continue; }
+            resultado = num1 / num2;
+        } else {
+            printf("Opción inválida.\n");
+            continue;
+        }
+        printf("Resultado: %.2f\n", resultado);
+    }
+    printf("Fin del programa.\n");
+    return 0;
+}
